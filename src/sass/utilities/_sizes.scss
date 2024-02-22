@@ -4,50 +4,50 @@
   .margin {
     &-#{$size-name} {
       margin: $size-value;
-
-      &-block-start {
+    }
+      &-block-start-#{$size-name} {
         margin-block-start: $size-value;
       }
-      &-block-end {
+      &-block-end-#{$size-name} {
         margin-block-end: $size-value;
       }
-      &-block {
+      &-block-#{$size-name} {
         margin-block: $size-value;
       }
-      &-inline-start {
+      &-inline-start-#{$size-name} {
         margin-inline-start: $size-value;
       }
-      &-inline-end {
+      &-inline-end-#{$size-name} {
         margin-inline-end: $size-value;
       }
-      &-inline {
+      &-inline-#{$size-name} {
         margin-inline: $size-value;
       }
-    }
+    
   }
 
   .padding {
     &-#{$size-name} {
       padding: $size-value;
-
-      &-block-start {
+    }
+      &-block-start-#{$size-name} {
         padding-block-start: $size-value;
       }
-      &-block-end {
+      &-block-end-#{$size-name} {
         padding-block-end: $size-value;
       }
-      &-block {
+      &-block-#{$size-name} {
         padding-block: $size-value;
       }
-      &-inline-start {
+      &-inline-start-#{$size-name} {
         padding-inline-start: $size-value;
       }
-      &-inline-end {
+      &-inline-end-#{$size-name} {
         padding-inline-end: $size-value;
       }
-      &-inline {
+      &-inline-#{$size-name} {
         padding-inline: $size-value;
       }
     }
-  }
+  
 }
