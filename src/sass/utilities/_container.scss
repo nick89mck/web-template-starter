@@ -1,0 +1,4 @@
+.container {
+    width: min(100% - 2, 60rem); // min uses smaller of the 2 options
+    margin-inline: auto; // defines both inline start and end margins
+}
