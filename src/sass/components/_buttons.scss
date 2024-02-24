@@ -8,28 +8,37 @@
     line-height: 1;
     border: 0;
     font-weight: $fw-700;
-    transition: 275m ease;
+    transition: 275ms ease;
 
     padding: 1.125em 2em;
 
     &[data-button="primary"] {
         background-color: clr(primary, 400);
-        color: clr(neutral, 900);
+        color: clr(neutral, 100);
+
+        &:hover,
+        &:focus {
+            background-color: clr(neutral, 100);
+            color: clr(neutral, 900);
+        }
     }
 
     &[data-button="neutral"] {
         --outline-size: 5px;
 
         background: transparent;
-        outline: var(--outline-size) solid clr(neutral, 100);
+        outline: var(--outline-size) solid clr(neutral, 900);
         outline-offset: calc(car(--outline-size) * -1);
-        color: clr(neutral, 100);
+        color: clr(neutral, 900);
+
+        &:hover,
+        &:focus {
+            background-color: clr(neutral, 900);
+            color: clr(neutral, 100);
+            outline: var(--outline-size) solid clr(neutral, 900);
+        }   
     }
 
-    &:hover,
-    &:focus {
-        background-color: clr(neutral, 100);
-        color: clr(neutral, 900);
-    }
+    
 }
 
