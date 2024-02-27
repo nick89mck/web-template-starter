@@ -9,9 +9,9 @@ export default defineConfig({
     emptyOutDir: true,
 
   },   
-  // plugins: [
-  //       htmlPurge(),
-  //   ],
+  plugins: [
+        htmlPurge(),
+    ],
     
 })
 
