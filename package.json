@@ -7,7 +7,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "browserslist": "> 0.25%, last 2 versions, not dead",
   "devDependencies": {
     "postcss-preset-env": "^9.4.0",
     "sass": "^1.71.1",
