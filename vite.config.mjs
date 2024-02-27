@@ -7,10 +7,11 @@ export default defineConfig({
   build: {
     outDir: "../dist",
     emptyOutDir: true,
-    plugins: [
-        htmlPurge(),
-    ],
+
+  },   
+  // plugins: [
+  //       htmlPurge(),
+  //   ],
     
-  },
 })
 
