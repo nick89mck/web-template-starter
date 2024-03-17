@@ -1,44 +1,37 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .button {
-    display: inline-flex;
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 1;
-    border: 0;
-    font-weight: $fw-700;
-    transition: 275ms ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  text-transform: $button-text-transform;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  font-weight: $button-font-weight;
+  transition: 275ms ease;
 
-    padding: 1.125em 2em;
+  padding: $button-padding;
 
-    &[data-button="primary"] {
-        background-color: clr(primary, 400);
-        color: clr(neutral, 100);
+  &[data-button="primary"] {
+    background-color: $button-primary-background;
+    color: $button-primary-color;
 
-        &:hover,
-        &:focus {
-            background-color: clr(neutral, 100);
-            color: clr(neutral, 900);
-        }
+    &:is(:hover, :focus) {
+      background-color: $button-primary-background-hover;
+      color: $button-primary-color-hover;
     }
+  }
 
-    &[data-button="neutral"] {
-        --outline-size: 5px;
+  &[data-button="accent"] {
+    background-color: $button-accent-background;
+    color: $button-accent-color;
 
-        background: transparent;
-        outline: var(--outline-size) solid clr(neutral, 900);
-        outline-offset: calc(car(--outline-size) * -1);
-        color: clr(neutral, 900);
-
-        &:hover,
-        &:focus {
-            background-color: clr(neutral, 900);
-            color: clr(neutral, 100);
-            outline: var(--outline-size) solid clr(neutral, 900);
-        }   
+    &:is(:hover, :focus) {
+      background-color: $button-accent-background-hover;
+      color: $button-accent-color-hover;
     }
-
-    
+  }
 }
-
