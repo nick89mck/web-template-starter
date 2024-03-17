@@ -15,3 +15,7 @@
 .container[data-size="narrow"] {
     --max-width: #{$container-max-width-narrow};
 }
+
+.container[data-size="full-bleed"] {
+    --max-width: 100%;
+}
