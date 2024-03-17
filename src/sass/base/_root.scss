@@ -1,0 +1,25 @@
+// file could also be called custom properties
+
+@use "../abstracts/" as *;
+
+:root {
+  @each $color, $shade-map in $colors {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $breakpoint, $sizes in $font-sizes {
+    @if ($breakpoint == "small") {
+      @each $size-name, $size-value in $sizes {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      @include mq($breakpoint) {
+        @each $size-name, $size-value in $sizes {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+}
